@@ -20,6 +20,8 @@ class SiteProtection
     {
         $password = config('site-protection.passwords');
 
+        dd($request->url());
+
         if (empty($password)) {
             return $next($request);
         }
